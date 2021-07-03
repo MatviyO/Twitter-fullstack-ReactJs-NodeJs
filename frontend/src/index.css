@@ -7,7 +7,108 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+/*// sign in*/
+
+.container_auth{
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 100vh;
+}
+.wrapper__left {
+  background-color: rgb(116, 202, 254);
+  background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_1302x955.png");
+  min-width: 55vw;
+}
+.wrapper__right {
+  min-width: 45vw;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.main {
+  padding: 16px;
+  color: rgb(217, 217, 217);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__wrapper {
+  display: flex;
+  padding: 20px;
+  margin: 40px 0px;
+  flex-direction: column;
+}
+.main__icon {
+  margin-bottom: 50px;
+
+}
+.main__icon_twitt {
+  font-size: 3.1875rem!important;
+
+}
+.main__title {
+  font-size: 64px;
+  margin-bottom: 30px;
+}
+.main__description {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+.main__form {
+ display: flex;flex-direction: column;
+}
+.link__fill {
+  background-color: rgb(29, 161, 242);
+  border: 1px solid rgb(29, 161, 242);
+  outline-style: none;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  min-width: 48px;
+  min-height: 48px;
+  margin-bottom: 20px;
+  max-width: 380px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+}
+.link__fill:hover {
+  background-color: black;
+
+}
+.link__outline {
+  background-color: black;
+  outline-style: none;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  min-width: 48px;
+  min-height: 48px;
+  margin-bottom: 20px;
+  max-width: 380px;
+  padding-left: 32px;
+  padding-right: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9999px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px solid rgb(29, 161, 242);
+}
+.link__outline:hover {
+  background-color: rgb(29, 161, 242);
 }
