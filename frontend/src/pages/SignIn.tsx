@@ -1,17 +1,7 @@
 import React, {useState} from 'react';
-import {Link} from "react-router-dom";
-import {
-    Button,
-    Dialog, DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    FormControl, FormGroup, IconButton,
-    InputLabel,
-    makeStyles, Select, TextField
-} from "@material-ui/core";
-import CloseIcon from '@material-ui/icons/Close';
+import {makeStyles,} from "@material-ui/core";
 import TwitterIcon from '@material-ui/icons/Twitter';
+import SectionTitle from "../components/title/SectionTitle";
 
 const useStyles = makeStyles((theme) => ({
     button: {
@@ -21,14 +11,13 @@ const useStyles = makeStyles((theme) => ({
         verticalAlign: 'middle',
         marginRight: theme.spacing(1)
     },
+    loginSideField: {
+        marginButtom: 18
+    }
 }))
 
 const SignIn = () => {
-    const [open, setOpen] = useState(false)
 
-    const handleClickOpen = () => {
-        setOpen(!open)
-    }
     const classes = useStyles()
 
     return (
@@ -42,7 +31,7 @@ const SignIn = () => {
                             <TwitterIcon fontSize="large" className="main__icon_twitt"/>
                         </div>
                         <div className="main__title">
-                            Here and now
+                            <SectionTitle  title="Here and now"/>
                         </div>
                         <div className="main__description">
                             Come to Twitter already this day.
@@ -55,51 +44,7 @@ const SignIn = () => {
                 </div>
             </section>
 
-            <Dialog
-                open={open}
-                onClose={handleClickOpen}
-                aria-labelledby="max-width-dialog-title"
-            >
-                <DialogTitle id="max-width-dialog-title">
-                    <IconButton onClick={handleClickOpen}
-                                color="secondary"
-                                aria-label="clsoe">
-                        <CloseIcon style={{fontSize: 26}}/>
-                    </IconButton>
-                    Login to Twitter
-                </DialogTitle>
-                <DialogContent>
-                    <form noValidate>
-                        <FormControl component="fieldset" fullWidth>
-                            <FormGroup aria-label="position" row>
-                                <TextField
-                                    autoFocus
-                                    margin="dense"
-                                    id="email"
-                                    label="Enter your Email"
-                                    type="email"
-                                    InputLabelProps={{shrink: true}}
-                                    variant="filled"
-                                    fullWidth
-                                />
-                                <TextField
-                                    autoFocus
-                                    margin="dense"
-                                    id="password"
-                                    label="Enter your Password"
-                                    type="password"
-                                    fullWidth
-                                />
-                            </FormGroup>
-                        </FormControl>
-                    </form>
-                </DialogContent>
-                <DialogActions>
-                    <Button onClick={handleClickOpen} color="primary">
-                        Close
-                    </Button>
-                </DialogActions>
-            </Dialog>
+
         </div>
     );
 };

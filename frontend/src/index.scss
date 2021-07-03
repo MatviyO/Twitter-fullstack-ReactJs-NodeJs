@@ -13,6 +13,9 @@ body {
   display: flex;
 }
 
+/*components*/
+@import "components/title/title";
+
 /*// sign in*/
 
 .container_auth{
@@ -55,8 +58,7 @@ body {
 
 }
 .main__title {
-  font-size: 64px;
-  margin-bottom: 30px;
+
 }
 .main__description {
   font-size: 34px;
