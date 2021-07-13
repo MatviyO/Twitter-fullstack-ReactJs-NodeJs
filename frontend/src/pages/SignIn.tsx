@@ -39,6 +39,7 @@ const SignIn = () => {
                             <button onClick={handleClickOpen} className="link__outline">Login</button>
                         </div>
                     </div>
+                    
                     <DialogComponent title="Login to Twitter" open={open} onClose={() => handleClickOpen()}>
                         <FormControl component="fieldset" fullWidth>
                             <FormGroup aria-label="position" row>

@@ -37,8 +37,6 @@ const DialogComponent: FC<Props> = ({title, children, open = false, onClose}: Pr
         return null;
     }
 
-
-
     return (
         <Dialog
             open={open}
