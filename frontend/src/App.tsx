@@ -9,7 +9,6 @@ function App() {
         <Switch>
             <Route path="/signin"  component={SignIn}/>
             <Route path="/home"  component={Home}/>
-
         </Switch>
     );
 }
